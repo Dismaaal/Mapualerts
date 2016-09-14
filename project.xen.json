@@ -1,0 +1,22 @@
+{
+  "schema": "https://schemas.xenforms.com/xenproject/v1/",
+  "assemblies": [
+    {
+      "include": true,
+      "relativePath": "\\Project\\Project.Droid\\bin\\Debug\\FormsViewGroup.dll"
+    },
+    {
+      "include": true,
+      "relativePath": "\\Project\\Project.Droid\\bin\\Debug\\Project.dll"
+    },
+    {
+      "include": true,
+      "relativePath": "\\Project\\Project.Droid\\bin\\Debug\\Project.Droid.dll"
+    },
+    {
+      "include": true,
+      "relativePath": "\\Project\\Project\\bin\\Debug\\Project.dll"
+    }
+  ],
+  "views": null
+}

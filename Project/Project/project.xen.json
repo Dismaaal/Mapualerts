@@ -1,0 +1,10 @@
+{
+  "schema": "https://schemas.xenforms.com/xenproject/v1/",
+  "assemblies": [
+    {
+      "include": true,
+      "relativePath": "\\bin\\Debug\\Project.dll"
+    }
+  ],
+  "views": null
+}

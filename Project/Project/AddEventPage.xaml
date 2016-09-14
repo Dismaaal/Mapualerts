@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.AddEventPage"
+             BackgroundColor="White">
+<StackLayout Orientation="Vertical">
+  <Label HorizontalOptions="Center" FontSize="20" Text="Add Event" TextColor="Black"/>
+<Entry x:Name="Titulo" Placeholder="Title" PlaceholderColor="Black" TextColor="Black"/>
+  <Label Text="Notes:" TextColor="Black"></Label>
+<Editor HeightRequest="30" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" TextColor="Black"></Editor>
+</StackLayout>
+</ContentPage>
