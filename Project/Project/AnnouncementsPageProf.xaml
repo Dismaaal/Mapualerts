@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.AnnouncementsPageProf"
+             BackgroundColor="White">
+  <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+    <Label Text="Announcements" FontSize="30" TextColor="Black"/>
+    <ListView x:Name ="AnnLV"
+        HasUnevenRows="True"
+        IsPullToRefreshEnabled="True"
+            >
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell >
+            <ViewCell.ContextActions>
+              <MenuItem Clicked="OnMore" CommandParameter="{Binding .}"
+                 Text="More" />
+              <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}"
+                 Text="Delete" IsDestructive="True" />
+            </ViewCell.ContextActions>
+            <StackLayout Orientation="Vertical" Padding="20">
+              <Label Text="{Binding Subject}" TextColor="Black" />
+
+              <!--<Label Text="{Binding Section}"/>-->
+
+            </StackLayout>
+
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+
+    </ListView>
+    
+<StackLayout HorizontalOptions="FillAndExpand">
+<Button x:Name="btnAdd" Text ="Add Announcement" Clicked="btnAdd_Clicked"/>
+</StackLayout>
+  </StackLayout>
+</ContentPage>

@@ -19,6 +19,7 @@ namespace Project.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+
             base.OnCreate(savedInstanceState);
             Task.Delay(5000);
 

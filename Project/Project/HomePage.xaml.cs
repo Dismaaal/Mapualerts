@@ -2,26 +2,37 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace Project
 {
     public partial class HomePage : ContentPage
     {
+        string classId;
+        ObservableCollection<Classes> OSubject = new ObservableCollection<Classes>();
+        ParseUser currentUser = ParseUser.CurrentUser;
         public HomePage()
         {
             InitializeComponent();
             ParseClient.Initialize("h0XrQqdnzNEKTOwyywt7OZL8Ax7hsm1kjgS5UrLR", "5eGpLQhox6cqHQ2azGgRnuEurCJL6EfTIgKzBsFJ");
-            ParseUser currentUser = ParseUser.CurrentUser;
+           // Refresh();
+           
+            SubjectsLV.ItemTapped += SubjectsLV_ItemTapped;
 
+            
+        }
+        public void Refresh()
+        {
             var q = ParseObject.GetQuery("ClassAssignment").WhereEqualTo("Student", currentUser.ObjectId);
             IEnumerable<ParseObject> assigns = q.FindAsync().Result;
 
-            ObservableCollection<Classes> OSubject = new ObservableCollection<Classes>();
             foreach (ParseObject assign in assigns)
             {
 
@@ -39,7 +50,8 @@ namespace Project
                         subject.Add(new Classes
                         {
                             Course = mes,
-                            Room = "MKT" + room
+                            Room = "MKT" + room,
+                            Id = cl.ObjectId
                         });
                     }
 
@@ -49,18 +61,70 @@ namespace Project
                     {
                         OSubject.Add(s);
                     }
+                    
                 }
+                
             }
-
-            SubjectsLV.ItemTapped += SubjectsLV_ItemTapped;
-
             
         }
 
         private async void SubjectsLV_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            await Navigation.PushModalAsync(new SchedulePage());
+            try
+            {
+                Classes cl = (Classes)SubjectsLV.SelectedItem;
+                classId = cl.Id;
+                await Navigation.PushModalAsync(new TabbedPageStudent(classId));
+            }
+            catch(Exception ex)
+            {
+                await DisplayAlert("Error", ex.ToString(), "OK");
+            }
         }
+        //public event EventHandler Refreshing;
+
+
+        //public bool IsPullToRefreshEnabled { get; set; } = false;
+        //public bool IsRefreshing { get; set; } = false;
+        //public ICommand RefreshCommand { get; set; } = null;
+
+        //public void BeginRefresh();
+        //public void EndRefresh();
+   
+
+        //public class ListItem : List<string>, INotifyCollectionChanged
+        //{
+        //    public event NotifyCollectionChangedEventHandler CollectionChanged;
+
+        //    public new void Reverse()
+        //    {
+        //        base.Reverse();
+
+        //        if (CollectionChanged != null)
+        //        {
+        //            CollectionChanged(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
+        //        }
+        //    }
+        //}
+        protected override void OnAppearing()
+        {
+            Refresh();
+            SubjectsLV.RefreshCommand = new Command(() =>
+            {
+                OSubject.Clear();
+                Refresh();
+                SubjectsLV.IsRefreshing = false;
+            });
+            
+            base.OnAppearing();
+        }
+
+        protected override void OnDisappearing()
+        {
+            Content = null;
+            base.OnDisappearing();
+        }
+
 
         //SubjectsLV.ItemsSource = new List<Subject>
         //{
@@ -78,36 +142,6 @@ namespace Project
         //};
 
 
-        //ParseUser currentUser = ParseUser.CurrentUser;
-
-        //if (currentUser.Get<string>("Role") == "xvcLCBmaMW")
-        //{
-        //    Navigation.PushAsync(new ProfessorPage());
-        //}
-
-        //var q = ParseObject.GetQuery("ClassAssignment").WhereEqualTo("Student", currentUser.ObjectId);
-        //IEnumerable<ParseObject> classes = q.FindAsync().Result;
-
-        //foreach (ParseObject cl in classes)
-        //{
-        //    var qAnnouncements = ParseObject.GetQuery("Announcement").WhereEqualTo("Class", cl.Get<string>("Class"));
-        //    IEnumerable<ParseObject> announcements = qAnnouncements.FindAsync().Result;
-
-        //    foreach (ParseObject announcement in announcements)
-        //    {
-        //        string mes = announcement.Get<string>("Message");
-
-        //        SubjectsLV.ItemsSource = new List<Subject>
-        //        {
-        //            new Subject
-        //            {
-        //                Mesg = mes
-        //            }
-
-        //        };
-
-        //    }
-        //}
         public void OnSelection(object sender, SelectedItemChangedEventArgs e)
         {
             if(e.SelectedItem == null) { return; }
@@ -115,7 +149,6 @@ namespace Project
           
         }
 
-        
 
         public void OnMore(object sender, EventArgs e)
         {

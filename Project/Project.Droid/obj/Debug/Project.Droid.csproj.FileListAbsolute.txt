@@ -281,11 +281,11 @@ C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project.Droid\obj\Debug\res\drawa
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project.Droid\obj\Debug\R.cs.flag
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project.Droid\obj\Debug\uploadflags.txt
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project.Droid\bin\Debug\Project.Droid.dll.mdb
-C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project.Droid\bin\Debug\Project.dll.mdb
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project.Droid\bin\Debug\Java.Interop.dll.mdb
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project.Droid\bin\Debug\Mono.Android.dll.mdb
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project.Droid\bin\Debug\Mono.Android.Export.dll.mdb
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project.Droid\bin\Debug\mscorlib.dll.mdb
+C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project.Droid\bin\Debug\Project.dll.mdb
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project.Droid\bin\Debug\System.ComponentModel.Composition.dll.mdb
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project.Droid\bin\Debug\System.Core.dll.mdb
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project.Droid\bin\Debug\System.dll.mdb

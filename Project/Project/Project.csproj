@@ -35,8 +35,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AddAnnouncementsPage.xaml.cs">
+      <DependentUpon>AddAnnouncementsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AddEventPage.xaml.cs">
       <DependentUpon>AddEventPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Announcements.cs" />
+    <Compile Include="AnnouncementsPage.xaml.cs">
+      <DependentUpon>AnnouncementsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AnnouncementsPageProf.xaml.cs">
+      <DependentUpon>AnnouncementsPageProf.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -64,7 +74,16 @@
     <Compile Include="SchedulePage.xaml.cs">
       <DependentUpon>SchedulePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SchedulePageProf.xaml.cs">
+      <DependentUpon>SchedulePageProf.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Subject.cs" />
+    <Compile Include="TabbedPageProf.xaml.cs">
+      <DependentUpon>TabbedPageProf.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TabbedPageStudent.xaml.cs">
+      <DependentUpon>TabbedPageStudent.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ExifLib, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -182,6 +201,42 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ClassesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AnnouncementsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TabbedPageStudent.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TabbedPageProf.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SchedulePageProf.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AnnouncementsPageProf.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddAnnouncementsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -10,5 +10,6 @@ namespace Project
     {
         public string Mesg{ get; set; }
         public string Room { get; set; }
+        public string Id { get; set; }
     }
 }

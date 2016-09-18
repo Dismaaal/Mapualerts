@@ -15,10 +15,12 @@ namespace Project
         {
             InitializeComponent();
             ParseClient.Initialize("h0XrQqdnzNEKTOwyywt7OZL8Ax7hsm1kjgS5UrLR", "5eGpLQhox6cqHQ2azGgRnuEurCJL6EfTIgKzBsFJ");
-            
-            MainPage = CrossConnectivity.Current.IsConnected ? (Page)new NavigationPage(new LoginPage()) : new NoNetworkPage();
-            NavigationPage.SetHasNavigationBar(MainPage, false);
-
+            //MainPage = CrossConnectivity.Current.IsConnected ? (Page)new NavigationPage(new LoginPage()) : new NoNetworkPage();
+            //NavigationPage.SetHasNavigationBar(MainPage, false);
+            var navPage = new NavigationPage(new LoginPage());
+            NavigationPage.SetHasNavigationBar(navPage.CurrentPage, false);
+            //MainPage = navPage;
+            MainPage = CrossConnectivity.Current.IsConnected ? (Page)navPage : new NoNetworkPage();
         }
 
         protected override void OnStart()

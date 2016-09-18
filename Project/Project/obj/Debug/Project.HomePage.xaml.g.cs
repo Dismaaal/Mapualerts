@@ -20,17 +20,9 @@ namespace Project {
         private global::Xamarin.Forms.ListView SubjectsLV;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Button btnLogout;
-        
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Button btnTest;
-        
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(HomePage));
             SubjectsLV = this.FindByName<global::Xamarin.Forms.ListView>("SubjectsLV");
-            btnLogout = this.FindByName<global::Xamarin.Forms.Button>("btnLogout");
-            btnTest = this.FindByName<global::Xamarin.Forms.Button>("btnTest");
         }
     }
 }

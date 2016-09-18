@@ -12,14 +12,29 @@ namespace Project
 {
     public partial class ProfessorPage : ContentPage
     {
+        string classId;
+        ParseUser currentUser = ParseUser.CurrentUser;
+        ObservableCollection<Classes> OSubject = new ObservableCollection<Classes>();
         public ProfessorPage()
         {
             InitializeComponent();
             ParseClient.Initialize("h0XrQqdnzNEKTOwyywt7OZL8Ax7hsm1kjgS5UrLR", "5eGpLQhox6cqHQ2azGgRnuEurCJL6EfTIgKzBsFJ");
-            ParseUser currentUser = ParseUser.CurrentUser;
+            ClassesLV.ItemTapped += ClassesLV_ItemTapped;
+        }
+
+        private async void ClassesLV_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            Classes cl = (Classes)ClassesLV.SelectedItem;
+            classId = cl.Id;
+            await Navigation.PushModalAsync(new TabbedPageProf(classId));
+            
+        }
+
+        public void Refresh()
+        {
             var q = ParseObject.GetQuery("Class").WhereEqualTo("Professor", currentUser.ObjectId);
             IEnumerable<ParseObject> classes = q.FindAsync().Result;
-            ObservableCollection<Classes> OSubject = new ObservableCollection<Classes>();
+
             foreach (ParseObject cl in classes)
             {
 
@@ -34,11 +49,12 @@ namespace Project
                     subject.Add(new Classes
                     {
                         Course = mes,
-                        Room = "MKT"+room
+                        Room = "MKT" + room,
+                        Id = cl.ObjectId
                     });
                 }
-               
-               // OSubject = new ObservableCollection<Classes>();
+
+                // OSubject = new ObservableCollection<Classes>();
                 ClassesLV.ItemsSource = OSubject;
                 foreach (Classes s in subject)
                 {
@@ -46,13 +62,26 @@ namespace Project
                 }
 
             }
-            ClassesLV.ItemTapped += ClassesLV_ItemTapped;
+        }
+        protected override void OnAppearing()
+        {
+            Refresh();            
+            ClassesLV.RefreshCommand = new Command(() =>
+            {
+                OSubject.Clear();
+                Refresh();
+                ClassesLV.IsRefreshing = false;
+            });
+
+            base.OnAppearing();
         }
 
-        private void ClassesLV_ItemTapped(object sender, ItemTappedEventArgs e)
+        protected override void OnDisappearing()
         {
-            Navigation.PushModalAsync(new ClassesPage());
+            Content = null;
+            base.OnDisappearing();
         }
+
 
         // }
 

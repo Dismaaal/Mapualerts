@@ -20,13 +20,13 @@ namespace Project {
         private global::Xamarin.Forms.Entry SendTo;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Editor Msg;
+        private global::Xamarin.Forms.Entry Msg;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(ConsultPage));
             SendTo = this.FindByName<global::Xamarin.Forms.Entry>("SendTo");
-            Msg = this.FindByName<global::Xamarin.Forms.Editor>("Msg");
+            Msg = this.FindByName<global::Xamarin.Forms.Entry>("Msg");
         }
     }
 }

@@ -27,6 +27,7 @@ namespace Project
                     };
                         Calendar calendar = new Calendar { 
 							//MaxDate=DateTime.Now.AddDays(30), 
+                            
 							SelectedDate = datesel,
                             StartDate = DateTime.Now,
                             SpecialDates = new List<SpecialDate>{
@@ -36,9 +37,10 @@ namespace Project
                         };
                         Button button = new Button
                         {
-                            Text="Add Event",
+                            Text="View Event",
 
                         };
+            
                     button.Clicked += OnButton_Clicked;
                     this.Content = new StackLayout
                     {
@@ -54,7 +56,7 @@ namespace Project
 
         private void OnButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new AddEventPage(datesel));
+            DisplayAlert("Title", "Message", "Ok");
         }
     }
         

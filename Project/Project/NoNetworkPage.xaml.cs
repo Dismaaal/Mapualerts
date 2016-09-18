@@ -13,11 +13,10 @@ namespace Project
     {
         public NoNetworkPage()
         {
+            DisplayAlert("No Network Connectivity", "This app requires a network connection", "OK");
             InitializeComponent();
-            this.DisplayAlert("No Network Connectivity", "This app requires a network connection", "OK");
             CrossConnectivity.Current.ConnectivityChanged += Current_ConnectivityChanged;
         }
-
 
         private void Current_ConnectivityChanged(object sender, Plugin.Connectivity.Abstractions.ConnectivityChangedEventArgs e)
         {

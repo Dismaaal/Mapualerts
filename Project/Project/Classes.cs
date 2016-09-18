@@ -10,6 +10,6 @@ namespace Project
     {
         public string Course { get; set; }
         public string Room { get; set; }
-
+        public string Id { get; set; }
     }
 }

@@ -7,37 +7,39 @@
              >
   <StackLayout Orientation="Vertical" HorizontalOptions="Center">
     <Label Text="Your Subjects" FontSize="30" TextColor="Black"/>
- 
-        <ListView x:Name ="SubjectsLV"
-            HasUnevenRows="True"
-            IsPullToRefreshEnabled="True"
-            >
-    <ListView.ItemTemplate>
-      <DataTemplate>
-        <ViewCell >
-          <ViewCell.ContextActions>
-            <MenuItem Clicked="OnMore" CommandParameter="{Binding .}"
-               Text="More" />
-            <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}"
-               Text="Delete" IsDestructive="True" />
-          </ViewCell.ContextActions>
-          <StackLayout Orientation="Vertical" Padding="20">
-            <Label Text="{Binding Course}" TextColor="Black"/>
-            <Label Text="{Binding Room}" TextColor="Black"/>
-            <!--<Label Text="{Binding Section}"/>-->
-        
-          </StackLayout>
-          
-        </ViewCell>
-      </DataTemplate>
-    </ListView.ItemTemplate>
-    
-  </ListView>
-   <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End" Spacing="100" Grid.Row="4" Grid.ColumnSpan="2">
+
+    <ListView x:Name ="SubjectsLV"
+        HasUnevenRows="True"
+        IsPullToRefreshEnabled="True">
+      <!--RefreshCommand="{Binding LoadTweetsCommand}"
+            IsRefreshing="{Binding IsBusy, Mode=OneWay}"-->
+
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell >
+            <ViewCell.ContextActions>
+              <MenuItem Clicked="OnMore" CommandParameter="{Binding .}"
+                 Text="More" />
+              <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}"
+                 Text="Delete" IsDestructive="True" />
+            </ViewCell.ContextActions>
+            <StackLayout Orientation="Vertical" Padding="20">
+              <Label Text="{Binding Course}" TextColor="Black"/>
+              <Label Text="{Binding Room}" TextColor="Black"/>
+              <!--<Label Text="{Binding Section}"/>-->
+
+            </StackLayout>
+
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+
+    </ListView>
+   <!--<StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End" Spacing="100" Grid.Row="4" Grid.ColumnSpan="2">
       <Button x:Name="btnLogout" Text="Logout" TextColor="Gray" Grid.Column="0" Clicked="btnLogout_Clicked" />
-      <!--<Button x:Name="btnLogout" Text="Logout"  TextColor="Gray" Grid.Column="2" Clicked="btnLogout_Clicked" />-->
+      --><!--<Button x:Name="btnLogout" Text="Logout"  TextColor="Gray" Grid.Column="2" Clicked="btnLogout_Clicked" />--><!--
      <Button x:Name="btnTest" Text="Consult" Grid.Column="1" Clicked="btnTest_Clicked"></Button>
-    </StackLayout>
+    </StackLayout>-->
     
     </StackLayout>
   

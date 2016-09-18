@@ -5,7 +5,7 @@
              xmlns:controls="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar"       
              BackgroundColor="White"
              x:Name="Schedule">
-  <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End" Spacing="100" Grid.Row="4" Grid.ColumnSpan="2">
+  <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End" Spacing="100" Grid.Row="4" Grid.ColumnSpan="2" >
   <Label x:Name="DateToday"></Label>
     </StackLayout>
 

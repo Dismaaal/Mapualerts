@@ -133,7 +133,6 @@ C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\bin\Debug\XLabs.Forms.xml
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\bin\Debug\XLabs.Ioc.xml
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\bin\Debug\XLabs.Platform.xml
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\bin\Debug\XLabs.Serialization.xml
-C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.LoginPage.xaml.g.cs
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.App.xaml.g.cs
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.HomePage.xaml.g.cs
@@ -145,9 +144,12 @@ C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.AddEven
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.ClassesPage.xaml.g.cs
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.dll
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.pdb
-C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.dll.mdb
-C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\bin\Debug\Project.dll.mdb
-C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.dll.mdb
-C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\bin\Debug\Project.dll.mdb
+C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
+C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.AnnouncementsPage.xaml.g.cs
+C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.TabbedPageStudent.xaml.g.cs
+C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.TabbedPageProf.xaml.g.cs
+C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.SchedulePageProf.xaml.g.cs
+C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.AnnouncementsPageProf.xaml.g.cs
+C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.AddAnnouncementsPage.xaml.g.cs
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.dll.mdb
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\bin\Debug\Project.dll.mdb

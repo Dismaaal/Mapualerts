@@ -31,18 +31,23 @@ namespace Project
                 try
                 {
                     await ParseUser.LogInAsync(user, pass);
+                    goto jump1;
                 }
-                catch (Exception ex)
+                catch
                 {
                     await DisplayAlert("Error", "Wrong Username or Password", "OK");
+                    goto jump2;
                 }
+
+                
+jump1:
                 ParseUser currentUser = ParseUser.CurrentUser;
                 if (currentUser.Get<string>("Role") == "VCllbh368D")
                 {
-                    //Application.Current.MainPage = new HomePage();
+                    Application.Current.MainPage = new HomePage();
                     // Pops all but the root Page off the navigation stack, with optional animation.
-                    //await Navigation.PopToRootAsync(true);
-                    await Navigation.PushAsync(new HomePage());
+                    await Navigation.PopToRootAsync(true);
+                    //await Navigation.PushAsync(new HomePage());
                 }
                 else if (currentUser.Get<string>("Role") == "xvcLCBmaMW")
                 {
@@ -50,13 +55,20 @@ namespace Project
                     // Pops all but the root Page off the navigation stack, with optional animation.
                     await Navigation.PopToRootAsync(true);
                 }
+
+                else
+                {
+                    await DisplayAlert("Error", "Wrong Username or Password", "OK");
+
+                }
                 
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Error",ex.ToString(),"OK");
+                await DisplayAlert("Error", ex.ToString(),"OK");
             }
-
+        jump2:
+            ;
         }
     }
 }
