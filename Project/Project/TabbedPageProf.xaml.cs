@@ -13,7 +13,7 @@ namespace Project
         public TabbedPageProf(string classID)
         {
             InitializeComponent();
-            var schedPage = new SchedulePageProf();
+            var schedPage = new SchedulePageProf(classID);
             //navigationPage.Icon = "schedule.png";
             schedPage.Title = "Schedule";
 

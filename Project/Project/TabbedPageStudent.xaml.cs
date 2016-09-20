@@ -14,7 +14,7 @@ namespace Project
         public TabbedPageStudent(string classID)
         {
             InitializeComponent();
-            var schedPage = new SchedulePage();
+            var schedPage = new SchedulePage(classID);
             //navigationPage.Icon = "schedule.png";
             schedPage.Title = "Schedule";
 

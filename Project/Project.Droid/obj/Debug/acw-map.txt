@@ -1,3 +1,7 @@
+Project.Droid.LocalNotification, Project.Droid;md55daa398c2109994edbd398003feeba10.LocalNotification
+Project.Droid.LocalNotification, Project.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md55daa398c2109994edbd398003feeba10.LocalNotification
+Project.Droid.LocalNotification;md55daa398c2109994edbd398003feeba10.LocalNotification
+project.droid.LocalNotification;md55daa398c2109994edbd398003feeba10.LocalNotification
 Project.Droid.MainActivity, Project.Droid;md55daa398c2109994edbd398003feeba10.MainActivity
 Project.Droid.MainActivity, Project.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md55daa398c2109994edbd398003feeba10.MainActivity
 Project.Droid.MainActivity;md55daa398c2109994edbd398003feeba10.MainActivity

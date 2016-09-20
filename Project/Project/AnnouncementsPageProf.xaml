@@ -14,7 +14,7 @@
           <ViewCell >
             <ViewCell.ContextActions>
               <MenuItem Clicked="OnMore" CommandParameter="{Binding .}"
-                 Text="More" />
+                 Text="Edit" />
               <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}"
                  Text="Delete" IsDestructive="True" />
             </ViewCell.ContextActions>

@@ -16,7 +16,7 @@
           <ViewCell >
             <ViewCell.ContextActions>
               <MenuItem Clicked="OnMore" CommandParameter="{Binding .}"
-                 Text="More" />
+                 Text="Edit" />
               <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}"
                  Text="Delete" IsDestructive="True" />
             </ViewCell.ContextActions>
@@ -32,11 +32,11 @@
       </ListView.ItemTemplate>
 
     </ListView>
-    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End" Spacing="100" Grid.Row="4" Grid.ColumnSpan="2">
-      <Button x:Name="btnEvents" Text="Events" TextColor="Gray" Grid.Column="0" Clicked="btnEvents_Clicked" />
+    <!--<StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End" Spacing="100" Grid.Row="4" Grid.ColumnSpan="2">
+      <Button x:Name="btnEvents" Text="Events" TextColor="Gray" Grid.Column="0" Clicked="btnEvents_Clicked" />-->
       <!--<Button x:Name="btnLogout" Text="Logout"  TextColor="Gray" Grid.Column="2" Clicked="btnLogout_Clicked" />-->
-      <Button x:Name="btnConsultation" Text="Consult" Grid.Column="1" Clicked="btnConsultation_Clicked"></Button>
-    </StackLayout>
+      <!--<Button x:Name="btnConsultation" Text="Consult" Grid.Column="1" Clicked="btnConsultation_Clicked"></Button>
+    </StackLayout>-->
 
   </StackLayout>
   

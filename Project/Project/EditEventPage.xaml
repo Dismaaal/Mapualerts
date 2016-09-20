@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.EditEventPage">
+  <StackLayout Orientation="Vertical">
+    <Label HorizontalOptions="Center" FontSize="20" Text="Add Event" TextColor="Black"/>
+    <Label Text ="Event Type:" TextColor="Black"/>
+    <Picker x:Name="picker" Title="Event Type" BackgroundColor="Red" />
+    <Label Text="Notes:" TextColor="Black"></Label>
+    <Editor x:Name="notes" HeightRequest="30" HorizontalOptions="Fill" TextColor="Black"></Editor>
+    <Label Text="Time:" TextColor="Black"/>
+    <TimePicker x:Name="timePick" BackgroundColor="Red"></TimePicker>
+    <Label Text="Date:" TextColor="Black"/>
+    <DatePicker x:Name="Datepick" BackgroundColor="Black"></DatePicker>
+    <Button Text ="Add Event" Clicked="btnAdd_Clicked"/>
+
+  </StackLayout>
+</ContentPage>

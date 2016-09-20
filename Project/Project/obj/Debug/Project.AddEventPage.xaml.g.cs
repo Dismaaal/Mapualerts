@@ -17,12 +17,24 @@ namespace Project {
     public partial class AddEventPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Entry Titulo;
+        private global::Xamarin.Forms.Picker picker;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Editor notes;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.TimePicker timePick;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.DatePicker Datepick;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(AddEventPage));
-            Titulo = this.FindByName<global::Xamarin.Forms.Entry>("Titulo");
+            picker = this.FindByName<global::Xamarin.Forms.Picker>("picker");
+            notes = this.FindByName<global::Xamarin.Forms.Editor>("notes");
+            timePick = this.FindByName<global::Xamarin.Forms.TimePicker>("timePick");
+            Datepick = this.FindByName<global::Xamarin.Forms.DatePicker>("Datepick");
         }
     }
 }

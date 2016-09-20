@@ -44,14 +44,20 @@ jump1:
                 ParseUser currentUser = ParseUser.CurrentUser;
                 if (currentUser.Get<string>("Role") == "VCllbh368D")
                 {
-                    Application.Current.MainPage = new HomePage();
+                    var navpage = new NavigationPage(new HomePage());
+                    NavigationPage.SetHasNavigationBar(navpage.CurrentPage, false);
+
+                    Application.Current.MainPage = navpage;
+                    
                     // Pops all but the root Page off the navigation stack, with optional animation.
                     await Navigation.PopToRootAsync(true);
                     //await Navigation.PushAsync(new HomePage());
                 }
                 else if (currentUser.Get<string>("Role") == "xvcLCBmaMW")
                 {
-                    Application.Current.MainPage = new ProfessorPage();
+                    var navpage = new NavigationPage(new ProfessorPage());
+                    NavigationPage.SetHasNavigationBar(navpage.CurrentPage, false);
+                    Application.Current.MainPage = navpage;
                     // Pops all but the root Page off the navigation stack, with optional animation.
                     await Navigation.PopToRootAsync(true);
                 }

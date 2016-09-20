@@ -30,6 +30,7 @@ namespace Project
         }
         public void Refresh()
         {
+            
             var q = ParseObject.GetQuery("ClassAssignment").WhereEqualTo("Student", currentUser.ObjectId);
             IEnumerable<ParseObject> assigns = q.FindAsync().Result;
 
@@ -119,27 +120,6 @@ namespace Project
             base.OnAppearing();
         }
 
-        protected override void OnDisappearing()
-        {
-            Content = null;
-            base.OnDisappearing();
-        }
-
-
-        //SubjectsLV.ItemsSource = new List<Subject>
-        //{
-        //    new Subject
-        //    {
-        //        Mesg="IT193P",
-        //        Section="BT1"
-        //    },
-
-        //    new Subject
-        //    {
-        //        Mesg="CS143",
-        //        Section="AT1"
-        //    }
-        //};
 
 
         public void OnSelection(object sender, SelectedItemChangedEventArgs e)

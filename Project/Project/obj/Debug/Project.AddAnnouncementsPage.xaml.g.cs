@@ -17,11 +17,19 @@ namespace Project {
     public partial class AddAnnouncementsPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Entry subject;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Editor message;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button btnAdd;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(AddAnnouncementsPage));
+            subject = this.FindByName<global::Xamarin.Forms.Entry>("subject");
+            message = this.FindByName<global::Xamarin.Forms.Editor>("message");
             btnAdd = this.FindByName<global::Xamarin.Forms.Button>("btnAdd");
         }
     }

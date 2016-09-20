@@ -16,7 +16,6 @@
     </ResourceDictionary>
   </Page.Resources>
   <StackLayout x:Name ="LayoutRoot" VerticalOptions="Center">
-    <Label x:Name="lblTitle" Text="Mapualerts" HorizontalTextAlignment="Center" FontSize="30" TextColor="{DynamicResource bgColor}"/>
     <Image Source="mapua_logo.png"/>
     <!--<Entry Placeholder="Username" HorizontalTextAlignment="Center" TextColor="{DynamicResource fgColor}" BackgroundColor="{DynamicResource bgColor}"/>
     <Entry Placeholder="Password" IsPassword="True" HorizontalTextAlignment="Center" TextColor="{DynamicResource fgColor}" BackgroundColor="{DynamicResource bgColor}"/>

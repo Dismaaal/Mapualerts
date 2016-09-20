@@ -19,15 +19,18 @@ namespace Project
         {
             InitializeComponent();
             ParseClient.Initialize("h0XrQqdnzNEKTOwyywt7OZL8Ax7hsm1kjgS5UrLR", "5eGpLQhox6cqHQ2azGgRnuEurCJL6EfTIgKzBsFJ");
+            
             ClassesLV.ItemTapped += ClassesLV_ItemTapped;
+            
         }
 
-        private async void ClassesLV_ItemTapped(object sender, ItemTappedEventArgs e)
+        private void ClassesLV_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             Classes cl = (Classes)ClassesLV.SelectedItem;
             classId = cl.Id;
-            await Navigation.PushModalAsync(new TabbedPageProf(classId));
             
+            Navigation.PushAsync(new TabbedPageProf(classId));
+
         }
 
         public void Refresh()
@@ -76,11 +79,7 @@ namespace Project
             base.OnAppearing();
         }
 
-        protected override void OnDisappearing()
-        {
-            Content = null;
-            base.OnDisappearing();
-        }
+ 
 
 
         // }

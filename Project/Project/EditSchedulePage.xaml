@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.EditSchedulePage"
+             BackgroundColor="White">
+  <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+    <Label Text="Your Events" FontSize="30" TextColor="Black"/>
+
+    <ListView x:Name ="SubjectsLV"
+        HasUnevenRows="True"
+        IsPullToRefreshEnabled="True">
+      <!--RefreshCommand="{Binding LoadTweetsCommand}"
+            IsRefreshing="{Binding IsBusy, Mode=OneWay}"-->
+
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell >
+            <ViewCell.ContextActions>
+              <MenuItem Clicked="OnMore" CommandParameter="{Binding .}"
+                 Text="Edit" />
+              <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}"
+                 Text="Delete" IsDestructive="True" />
+            </ViewCell.ContextActions>
+            <StackLayout Orientation="Vertical" Padding="20">
+              <Label Text="{Binding type}" TextColor="Black"/>
+              <Label Text="{Binding desc}" TextColor="Black"/>
+              <Label Text="{Binding date}" TextColor="Black"/>
+              <!--<Label Text="{Binding Section}"/>-->
+
+            </StackLayout>
+
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+
+    </ListView>
+    <!--<StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End" Spacing="100" Grid.Row="4" Grid.ColumnSpan="2">
+      <Button x:Name="btnLogout" Text="Logout" TextColor="Gray" Grid.Column="0" Clicked="btnLogout_Clicked" />
+      -->
+    <!--<Button x:Name="btnLogout" Text="Logout"  TextColor="Gray" Grid.Column="2" Clicked="btnLogout_Clicked" />-->
+    <!--
+     <Button x:Name="btnTest" Text="Consult" Grid.Column="1" Clicked="btnTest_Clicked"></Button>
+    </StackLayout>-->
+
+  </StackLayout>
+</ContentPage>

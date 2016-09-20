@@ -5,9 +5,9 @@
              BackgroundColor="White">
   <StackLayout Orientation="Vertical">
   <Label Text="Add Announcement" HorizontalOptions="Center" FontSize="20" TextColor="Black"/>
-  <Entry Placeholder="Subject" PlaceholderColor="Gray" />
+  <Entry x:Name ="subject" Placeholder="Subject" PlaceholderColor="Gray" TextColor="Black" />
   <Label Text="Message:" TextColor="Black"/>
-  <Editor VerticalOptions="FillAndExpand" HorizontalOptions="Fill" TextColor="Black" />
+  <Editor x:Name ="message" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" TextColor="Black" />
   <Button x:Name="btnAdd" Text ="Add" Clicked="btnAdd_Clicked"/>
   </StackLayout>
 </ContentPage>

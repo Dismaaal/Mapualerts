@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using XamForms.Controls.Droid;
+using Parse;
 
 namespace Project.Droid
 {
@@ -21,6 +22,15 @@ namespace Project.Droid
             XamForms.Controls.Droid.Calendar.Init();
             LoadApplication(new App());
             //
+
+            // Initialize the parse client with your Application ID and Parse Server URL found on
+            ParseClient.Initialize("h0XrQqdnzNEKTOwyywt7OZL8Ax7hsm1kjgS5UrLR", "5eGpLQhox6cqHQ2azGgRnuEurCJL6EfTIgKzBsFJ");
+            //ParseClient.Initialize(new ParseClient.Configuration
+            //{
+            //    ApplicationId = "h0XrQqdnzNEKTOwyywt7OZL8Ax7hsm1kjgS5UrLR",
+            //    Server = "http://localhost:1337/parse/",
+
+            //});
         }
     }
 }
