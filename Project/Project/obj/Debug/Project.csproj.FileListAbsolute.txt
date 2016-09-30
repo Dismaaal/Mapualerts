@@ -164,3 +164,7 @@ C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.dll.mdb
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\bin\Debug\Project.dll.mdb
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.dll.mdb
 C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\bin\Debug\Project.dll.mdb
+C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.dll.mdb
+C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\bin\Debug\Project.dll.mdb
+C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\obj\Debug\Project.dll.mdb
+C:\Users\tamargo\Mapualerts\Mapualerts\Project\Project\bin\Debug\Project.dll.mdb
